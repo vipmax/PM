@@ -44,8 +44,7 @@ fig = plt.figure(3, figsize=(20, 10))
 ax = fig.add_subplot(111)
 bandwidths = [0.1, 0.2, 0.3, 1.0]
 for bandwidth in bandwidths:
-    ax.plot(x_grid, kde_sklearn(sample, x_grid, bandwidth=bandwidth), label='bandwidth={0}'.format(bandwidth),
-            linewidth=3, alpha=0.5)
+    ax.plot(x_grid, kde_sklearn(sample, x_grid, bandwidth=bandwidth), label='bandwidth={0}'.format(bandwidth), linewidth=3, alpha=0.5)
 ax.hist(sample, 50, fc='red', alpha=0.3, normed=True)
 ax.legend(loc='upper left')
 plt.title('KDE bandwidth comparision')
