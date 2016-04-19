@@ -240,3 +240,7 @@ dist =   stats.f.rvs(size=sample.__sizeof__(),*params)
 res = stats.ks_2samp(sample, dist)
 print(res)
 
+
+params = stats.lognorm.fit(sample)
+dist = stats.lognorm.rvs(size=1000,*params)
+res = scipy.stats.chisquare(sample, dist)
